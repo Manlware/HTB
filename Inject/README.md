@@ -15,4 +15,5 @@ python3 exploit.py
 - Upload shell.sh to /tmp directory in the target machine using wget.
 - Run netcat listener to catch the reverse shell connection.
 - Run chmod +x evil.sh, run evil.sh and get reverse shell.
+- Do not forget to change IP and Port in exploit.py.
 
