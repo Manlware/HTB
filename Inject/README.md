@@ -10,9 +10,9 @@
 python3 exploit.py
 ```
 **What does exploit.py do**
-- Create shell.sh file contains python3 onelinear reverse shell.
-- Create simpleHTTPServer.
-- Upload shell.sh to /tmp directory in target machine using wget.
-- Run nc listener to catch reverse shell connection.
-- chmod +x evil.sh, run it and get reverse shell.
+- Create a shell.sh file that contains a Python3 one-liner reverse shell.
+- Create simple HTTP Server.
+- Upload shell.sh to /tmp directory in the target machine using wget.
+- Run netcat listener to catch the reverse shell connection.
+- Run chmod +x evil.sh, run evil.sh and get reverse shell.
 
