@@ -17,3 +17,5 @@ python3 exploit.py
 - Run chmod +x evil.sh, run evil.sh and get reverse shell.
 - Do not forget to change IP and Port in exploit.py.
 
+## Privilege Escalation:
+
