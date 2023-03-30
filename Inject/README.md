@@ -18,4 +18,6 @@ python3 exploit.py
 - Do not forget to change IP and Port in exploit.py.
 
 ## Privilege Escalation:
+**SU to phil user using his password located in /home/frank/.m2/settings.xml and use Ansible playbook to ecalate to root**
 
+[Ansible Playbook Exploit](https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/ansible-playbook-privilege-escalation/)
