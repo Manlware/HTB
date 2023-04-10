@@ -53,13 +53,14 @@ python3 exploit.py
 
 ---
 ## Privilege Escalation:
-**SU to phil user using his password located in /home/frank/.m2/settings.xml and use Ansible playbook to ecalate to root**
-
-[Ansible Playbook Exploit](https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/ansible-playbook-privilege-escalation/)
-
+**Use sudo -l and use python3 /opt/scripts/system-checkup.py to get root**
 ### Exploit
 
-- Upload PrivEsc.py to target using wget and python Simple HTTP Server.
+- I found svc password in /var/www/app/.git/config file and used it to ssh.
+- Run sudo -l and found that we can run /usr/bin/python3 /opt/scripts/system-checkup.py * using sudo.
+- I cd to /opt/scripts/ and run the command sudo /usr/bin/python3 /opt/scripts/system-checkup.py and found that is has 3 args docker-ps, docker-inspect and full-checkup and I tried all of them and found that full-checkup run a file locate in the same directory called full-checkup.sh.
+- So I cd to /tmp and create file called full-checkup.sh that contain simple command id and chmod +x full-checkup.sh and run ``sudo /usr/bin/python3 /opt/scripts/system-checkup.py full-check``upand now I am root.
+  
   - Run Simple HTTP Server on Attacker Machine.
     
     ```
