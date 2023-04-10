@@ -4,3 +4,4 @@
 
 # Machines List:
 - **[Inject](https://github.com/Manlware/HTB/tree/main/Inject)**
+- **[Busqueda](https://github.com/Manlware/HTB/tree/main/Busqueda)**
