@@ -20,24 +20,21 @@ python3 exploit.py
   ``Engine.<engine>.search('<query>')``
 - I tried to abuse engine parameter and there was no way to abuse it.
 - Then I focused on query parameter and sent ' in it and it break the application so I was in the correct way.
-  Normal Request:
-  
-  
+
+
+  Normal Request:                                                                                         
   ![image](https://user-images.githubusercontent.com/59315492/230909846-0853fa7b-4b09-484c-9c39-0ba820f0883b.png)
   
   
-  Response:
- 
+  Response:                                                                                            
   ![image](https://user-images.githubusercontent.com/59315492/230909887-618f1b70-34c0-4b5f-a2b5-e7d6429a5f1b.png)
   
   
-  Abused Request with ' :
-  
+  Abused Request with ' :                                                                                     
   ![image](https://user-images.githubusercontent.com/59315492/230910048-4acc9c72-8621-4f3b-9092-895cc6dd7250.png)
   
   
-  Response:
-  
+  Response:                                                                                 
   ![image](https://user-images.githubusercontent.com/59315492/230910150-0326e94e-fe54-498a-9f9b-9319b44e5bd2.png)
 
 - I tried to bypass Searchor on my local machine and I found a way to bypass it.
@@ -45,7 +42,14 @@ python3 exploit.py
   ![image](https://user-images.githubusercontent.com/59315492/230912748-0bacadcb-d71a-4c10-a5ed-486798bccc35.png)
 
   ![image](https://user-images.githubusercontent.com/59315492/230912809-fa50c90a-bae6-4748-81ea-fd311472cfdf.png)
-
+ - I found that eval function take string and run it as python code I tried it and it worked. 
+  ![image](https://user-images.githubusercontent.com/59315492/230914598-544158e0-615f-4717-a17e-c004e5acd936.png)
+  ![image](https://user-images.githubusercontent.com/59315492/230914677-8a5643a9-ba84-44ed-94df-bc6828463364.png)
+ - I found way to get RCE using eval in [Bypass python sandbox](https://book.hacktricks.xyz/generic-methodologies-and-resources/python/bypass-python-sandboxes)
+  ![image](https://user-images.githubusercontent.com/59315492/230915451-e15ea78f-60fc-4d4d-903c-4f03ba152e02.png)
+  ![image](https://user-images.githubusercontent.com/59315492/230915542-36152379-2e8e-4a13-b92a-602d13a1c5cf.png)
+ 
+ - Finally I wrote python code to exploit it and get shell. 
 
 ---
 ## Privilege Escalation:
