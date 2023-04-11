@@ -62,3 +62,13 @@ python3 exploit.py
 - So I cd to /tmp and create file called ``full-checkup.sh`` that contain simple command id and ``chmod +x full-checkup.sh`` and run ``sudo /usr/bin/python3 /opt/scripts/system-checkup.py full-check``upand now I am root.
 ![image](https://user-images.githubusercontent.com/59315492/231019258-1e9834d7-ab03-439b-a14f-c7dc892c0366.png)
 
+### Python Automation Exploit:
+**Steps:**
+- Download PrivEsc.py script on target machine
+- Run it and now you are root!
+```
+  python3 PrivEsc.py
+```
+![image](https://user-images.githubusercontent.com/59315492/231023082-df3988c8-9668-4080-aeb2-647524bfcff2.png)
+
+
